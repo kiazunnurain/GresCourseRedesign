@@ -1,1 +1,1 @@
-# Gres-Course-Redesign
+# Gres Course Web Redesign 
