@@ -7,7 +7,7 @@ This project is a redesign of the **Gres Course** website, created as the **seco
 This project was developed by **Group 3**:
 
 - Zaskia Zun Nurain
-- Ahmad Faizulhaki
+- Ahmad Faizulhakim
 - Miracle Mikhael
 
 ### 📌 About the Project
