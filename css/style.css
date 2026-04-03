@@ -564,10 +564,11 @@ header {
 
 /* PRICE LIST CSS */
 #price-list {
-  background-image: url(/assets/images/background-04.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+    background-image: url(/assets/images/background-04.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 
 .price-header {
@@ -709,9 +710,8 @@ header {
 
 /* LANGUAGE CLASS CSS */
 #language-class {
-  text-align: center;
-  padding: 60px 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 60px 20px;
 }
 
 .language-header {
@@ -810,3 +810,293 @@ header {
   }
 }
 /* END LANGUAGE CLASS CSS */
+
+/* FAQ CSS */
+#questions {
+    background-image: url(/assets/images/background-03.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    padding:100px 5%;
+    overflow: hidden;
+}
+
+.questions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white; 
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.faq-logo {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.faq-logo h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.faq-logo p {
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.faq-logo h1 span, p span {
+    color: #FF6F41;
+}
+
+.btn-faq {
+    display: inline-block;
+    background-color: #FF6F41;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 6px 15px rgba(255, 107, 74, 0.4);
+    transition: 0.3s;
+}
+
+.btn-faq:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 74, 0.5);
+}
+
+.faq-container {
+    flex: 1.5;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid whitesmoke;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 20px 25px;
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    border: 1.5px solid #FF6B4A;
+    border-radius: 6px;
+    color: #FF6B4A;
+    font-size: 18px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.faq-answer {
+    max-height: 0;
+    padding: 0 25px;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.faq-answer p {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding-bottom: 20px; 
+    opacity: 1;
+}
+
+.faq-item.active .arrow {
+    color: #FFB8A1; 
+    border-color: #FFB8A1;
+}
+
+@media screen and (max-width: 768px) {
+    .questions {
+        padding: 30px 15px;
+        gap: 30px;
+    }
+
+    .faq-logo,
+    .faq-container {
+        min-width: 100%; 
+        width: 100%;
+    }
+
+    .faq-question {
+        padding: 15px 20px;
+        font-size: 13px;
+    }
+
+    .faq-answer {
+        padding: 0 20px;
+    }
+
+    .faq-item.active .faq-answer {
+        padding-bottom: 15px; 
+    }
+}
+/* END FAQ CSS*/
+
+/* TESTIMONIAL CSS */
+#testimonial {
+    background-image: url(/assets/images/background-02.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 100px 5%;
+    overflow: hidden;
+}
+
+.testimonial {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.testimonial-header {
+    flex: 1;
+    min-width: 300px;
+}
+
+.testimonial-header h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.testimonial-content {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 60px 25px 30px 25px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.01);
+    margin-top: 50px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+
+}
+
+.testimonial-card h1 {
+    color: #FFB8A1;
+    font-size: 70px;
+    font-family: Georgia, serif;
+    line-height: 0;
+    margin: 30px 0 25px 0;
+}
+
+.testimonial-card h4 {
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+    margin: 0 0 5px 0;
+}
+
+.testimonial-card span {
+    font-size: 15px;
+    color: gray;
+    margin: 0 0 15px 0;
+}
+
+.testimonial-card p {
+    font-size: 17px;
+    color: black;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #testimonial {
+        padding: 60px 5%;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .testimonial-header {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        max-width: 320px;
+        margin-top: 50px; 
+    }
+}

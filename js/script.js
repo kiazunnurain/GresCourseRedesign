@@ -55,5 +55,30 @@ document.addEventListener("DOMContentLoaded", function () {
       hamburgerIcon.classList.add("fa-bars");
     }
   });
+
+  // faq
+  document.querySelectorAll('.arrow').forEach(arrow => {
+        arrow.innerHTML = '+';
+    });
+
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            const arrow = button.querySelector('.arrow');
+            const isActive = faqItem.classList.contains('active');
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.arrow').innerHTML = '+';
+            });
+
+            if (!isActive) {
+                faqItem.classList.add('active');
+                arrow.innerHTML = '&minus;'; 
+            }
+        });
+    });
 });
 
