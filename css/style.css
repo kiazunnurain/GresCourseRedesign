@@ -483,3 +483,153 @@ header {
     }
 }
 /* END LANGUAGE CLASS CSS */
+
+/* FAQ CSS */
+#questions {
+    background-image: url(/assets/images/background-03.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    padding:100px 5%;
+}
+
+.questions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+    /* Ini yang bikin dia jadi kotak putih rapi di atas gambar */
+    background-color: #ffffff; 
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.faq-logo {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.faq-logo h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.faq-logo p {
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.faq-logo h1 span, p span {
+    color: #FF6F41;
+}
+
+.btn-faq {
+    display: inline-block;
+    background-color: #FF6F41;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 6px 15px rgba(255, 107, 74, 0.4);
+    transition: 0.3s;
+}
+
+.btn-faq:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 74, 0.5);
+}
+
+.faq-container {
+    flex: 1.5;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid whitesmoke;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 20px 25px;
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling ikon kotak tambah/kurang */
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    border: 1.5px solid #FF6B4A;
+    border-radius: 6px;
+    color: #FF6B4A;
+    font-size: 18px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+/* Sembunyiin jawaban secara default pakai max-height */
+.faq-answer {
+    max-height: 0;
+    padding: 0 25px;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.faq-answer p {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- STATE AKTIF (Saat Pertanyaan Dibuka) --- */
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Bikin transisi smooth turun ke bawah */
+    padding-bottom: 20px; 
+    opacity: 1;
+}
+
+/* Ubah warna ikon jadi abu-abu muda kalau lagi dibuka (sesuai gambar ke-2) */
+.faq-item.active .arrow {
+    color: #FFB8A1; 
+    border-color: #FFB8A1;
+}
