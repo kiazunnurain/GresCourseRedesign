@@ -16,35 +16,39 @@
 
     <!-- icons -->
     <script
-      src="https://kit.fontawesome.com/9e80564c31.js" crossorigin="anonymous"></script>
+      src="https://kit.fontawesome.com/9e80564c31.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- end icons -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <header>
-      <nav>
+      <nav class="navbar">
         <div class="logo">
           <img src="assets/images/logo.png" alt="Logo" />
-          <a href="home">Gres Course</a>
+          <a href="#home">Gres Course</a>
         </div>
+
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">About Us</a></li>
           <li><a href="#price-list">Join Class</a></li>
           <li><a href="#questions">FAQ</a></li>
+          <li><a href="#testimonial">Testimony</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+
+        <a href="#price-list" class="nav-cta">Daftar</a>
+
+        <button class="hamburger" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </nav>
     </header>
 
     <main>
-      
       <!-- home section -->
       <section id="home">
         <h1>Unlock <span>a World of Opportunities</span> with Gr's Course!</h1>
@@ -318,7 +322,7 @@
       <!-- end language class section -->
 
       <!-- Frequently Ask Questions Section -->
-      <section>
+      <section id="questions">
         <div>
           <div>
             <img src="assets/images/idea-lamp.png" alt="" />
@@ -478,27 +482,7 @@
       <p>&copy; 2026 Gres Course. All rights reserved.</p>
     </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("contactForm");
-
-        form.addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const phone = document.getElementById("phone").value;
-          const message = document.getElementById("message").value;
-
-          const subject = encodeURIComponent("Pesan dari Website");
-          const body = encodeURIComponent(
-            `Nama: ${name}\nEmail: ${email}\nNo HP: ${phone}\nPesan: ${message}`,
-          );
-
-          window.location.href = `mailto:zaskiazunsch@gmail.com?subject=${subject}&body=${body}`;
-        });
-      });
-    </script>
+   
     <script src="js/script.js"></script>
   </body>
 </html>
