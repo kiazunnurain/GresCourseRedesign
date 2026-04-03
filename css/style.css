@@ -234,3 +234,136 @@ header {
     font-size: 30px;
   }
 }
+
+#price-list {
+    background-image: url(/assets/images/background-04.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.price-header {
+    margin: 10px;
+    padding: 35px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+.price-card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 5%;
+}
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    font-family: sans-serif;
+    transition: 0.3s;
+}
+
+.price-card-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.price-card-subtitle {
+    font-size: 17px;
+    margin-bottom: 24px;
+}
+
+.price-card-price {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.price-card-price span {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.price-card-feature-intro {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.price-card-feature-list {
+    list-style: none;
+    flex-grow: 1;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.price-card-feature-list li {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.price-card-feature-list li i {
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.btn-price-list {
+    padding: 10px;
+    background-color: #FFB44B;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100px;
+    margin: auto;
+    display: block;
+}
+
+@media screen and (max-width: 992px) {
+    .price-card-section {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory; 
+        scroll-padding: 0 5%;
+        padding-bottom: 20px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .price-card-section::-webkit-scrollbar {
+        display: none;
+    }
+    .price-card-section {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .price-card {
+        flex: 0 0 auto; 
+        scroll-snap-align: center;
+    }
+}
