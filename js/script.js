@@ -1,24 +1,3 @@
-//form name
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactForm");
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const message = document.getElementById("message").value;
-
-    const subject = encodeURIComponent("Pesan dari Website");
-    const body = encodeURIComponent(
-      `Nama: ${name}\nEmail: ${email}\nNo HP: ${phone}\nPesan: ${message}`,
-    );
-
-    window.location.href = `mailto:zaskiazunsch@gmail.com?subject=${subject}&body=${body}`;
-  });
-});
-
 //navbar
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
@@ -55,30 +34,50 @@ document.addEventListener("DOMContentLoaded", function () {
       hamburgerIcon.classList.add("fa-bars");
     }
   });
-
-  // faq
-  document.querySelectorAll('.arrow').forEach(arrow => {
-        arrow.innerHTML = '+';
-    });
-
-    const faqQuestions = document.querySelectorAll('.faq-question');
-
-    faqQuestions.forEach(button => {
-        button.addEventListener('click', () => {
-            const faqItem = button.parentElement;
-            const arrow = button.querySelector('.arrow');
-            const isActive = faqItem.classList.contains('active');
-
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
-                item.querySelector('.arrow').innerHTML = '+';
-            });
-
-            if (!isActive) {
-                faqItem.classList.add('active');
-                arrow.innerHTML = '&minus;'; 
-            }
-        });
-    });
 });
 
+// faq
+document.querySelectorAll(".arrow").forEach((arrow) => {
+  arrow.innerHTML = "+";
+});
+
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach((button) => {
+  button.addEventListener("click", () => {
+    const faqItem = button.parentElement;
+    const arrow = button.querySelector(".arrow");
+    const isActive = faqItem.classList.contains("active");
+
+    document.querySelectorAll(".faq-item").forEach((item) => {
+      item.classList.remove("active");
+      item.querySelector(".arrow").innerHTML = "+";
+    });
+
+    if (!isActive) {
+      faqItem.classList.add("active");
+      arrow.innerHTML = "&minus;";
+    }
+  });
+});
+
+//form name
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    const subject = encodeURIComponent("Pesan dari Website");
+    const body = encodeURIComponent(
+      `Nama: ${name}\nEmail: ${email}\nNo HP: ${phone}\nPesan: ${message}`,
+    );
+
+    window.location.href = `mailto:zaskiazunsch@gmail.com?subject=${subject}&body=${body}`;
+  });
+});
